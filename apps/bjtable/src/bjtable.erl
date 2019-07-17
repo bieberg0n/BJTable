@@ -16,8 +16,10 @@
 
 main() ->
   B = btree:new(),
-  B1 = btree:set(a, "a", B),
-  B2 = btree:set(b, "b", B1),
-  B3 = btree:set(a, "c", B2),
+  B1 = btree:set(ccc, "a", B),
+  B2 = btree:set(bcc, "b", B1),
+  B3 = btree:set(acc, "c", B2),
+%%  B4 = btree:set(a, "c", B2),
   io:format("~p~n", [B3]),
-  io:format("~p~n", [btree:get(a, B3)]).
+  io:format("~p~n", [btree:get(a, B3)]),
+  io:format("~p~n", [btree:get(acc, B3)]).
